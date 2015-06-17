@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="64t-IL-609">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="60D-Sh-tiu">
+            <objects>
+                <navigationController id="64t-IL-609" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jwJ-eW-ZO8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1fH-nv-ROc" kind="relationship" relationship="rootViewController" id="st9-OP-Yk7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fBl-aB-L2d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28" y="-3"/>
+        </scene>
+        <!--iCloud Login-->
+        <scene sceneID="RmA-hX-Wod">
+            <objects>
+                <viewController id="1fH-nv-ROc" customClass="LoginController" customModule="CloudKit_Issue_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DyR-Z6-oJJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="h1M-Zl-5us"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dlk-z9-JGT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="i3B-62-Z5J">
+                                <rect key="frame" x="150" y="183" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="i3B-62-Z5J" firstAttribute="top" secondItem="DyR-Z6-oJJ" secondAttribute="bottom" constant="119" id="gqh-Zl-T2U"/>
+                            <constraint firstAttribute="centerX" secondItem="i3B-62-Z5J" secondAttribute="centerX" id="mtl-sV-6Qa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="iCloud Login" id="4a5-Ji-cOL"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="view" destination="Dlk-z9-JGT" id="jVa-Wv-4dP"/>
+                        <segue destination="vXZ-lx-hvc" kind="show" identifier="loginSuccess" id="QO7-p9-RYq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2HE-2w-EWM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="432" y="-3"/>
+        </scene>
+        <!--User Discovery-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController title="User Discovery" id="vXZ-lx-hvc" customClass="DiscoveryController" customModule="CloudKit_Issue_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="RuE-zP-Rt9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="User Discovery" id="gvM-dt-Db4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="844" y="-3"/>
+        </scene>
+    </scenes>
+</document>
